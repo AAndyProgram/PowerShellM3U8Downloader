@@ -2,7 +2,7 @@
 
 Script for downloading M3U8 video.
 
-Do you like this program? Consider adding to my coffee fund by making a donation to show your support. :)
+Enjoying the tool? Consider adding to my coffee fund by making a donation to show your support. :)
 
 [![ko-fi](https://www.ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/andyprogram)
 
