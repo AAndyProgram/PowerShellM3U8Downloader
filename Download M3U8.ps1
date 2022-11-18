@@ -11,7 +11,10 @@ if($plsUrl.Trim().Length -cgt 0 -and $outFileName.Length -cgt 0){
     $cacheDir = "d:\Downloads\cache\"
     if(Test-Path -Path $cacheDir){}else{New-Item -Path "d:\Downloads\" -Name "cache" -ItemType "directory"}
     $arrNames = $arr.ForEach({$cacheDir + $_})
-    for($i=0;$i -le $arrUrls.Count-1; $i++){Invoke-WebRequest $arrUrls[$i] -OutFile $arrNames[$i]}
+    for($i=0;$i -le $arrUrls.Count-1; $i++){
+        Write-Host "Downloading part " ($i+1) " of " $arrUrls.Count
+        Invoke-WebRequest $arrUrls[$i] -OutFile $arrNames[$i]
+    }
     $ff_files
     $arr.ForEach({$ff_files = $ff_files + $_ + "|"})
     $ff_files.Remove($ff_files.Length-1,1)
